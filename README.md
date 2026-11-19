@@ -21,6 +21,10 @@ O sistema coleta dados simulados de qualidade do ar e ruído, utiliza coordenada
 | INMP441 | Monitoramento de ruído | Potenciômetro |
 | NEO-6M | Localização GPS | Coordenadas virtuais |
 
+## Simulação
+
+[Simulação no Wokwi](https://wokwi.com/projects/480427850294010881)
+
 ##  Funcionamento
 
 1. O ESP32 realiza a leitura dos potenciômetros.

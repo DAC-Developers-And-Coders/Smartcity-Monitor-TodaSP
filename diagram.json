@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "Davi Dias",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": 333, "left": -208.4, "attrs": {} },
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 142.34,
+      "left": -207.5,
+      "rotate": 90,
+      "attrs": {}
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 219.5, "left": 57.4, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot2", "top": 219.5, "left": -29, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "pot1:VCC", "bb1:tp.25", "red", [ "v0" ] ],
+    [ "pot1:GND", "bb1:tn.24", "black", [ "v0" ] ],
+    [ "pot2:VCC", "bb1:tp.19", "red", [ "v0" ] ],
+    [ "pot2:GND", "bb1:tn.16", "black", [ "v0" ] ],
+    [ "esp:GND.2", "bb1:tn.10", "black", [ "v0" ] ],
+    [ "esp:3V3", "bb1:tp.12", "red", [ "v0.15", "h38.4" ] ],
+    [ "pot2:SIG", "esp:34", "green", [ "v28.8", "h-48.4", "v-144", "h-67.2" ] ],
+    [ "pot1:SIG", "esp:35", "purple", [ "v28.8", "h-48.4", "v-153.6", "h-172.8" ] ]
+  ],
+  "dependencies": {}
+}
